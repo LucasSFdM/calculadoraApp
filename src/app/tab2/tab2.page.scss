@@ -1,0 +1,45 @@
+// Aqui é onde fica as classes que serve pra deixar a interface mais bonita
+ion-label{
+    text-align: right;
+}
+
+ion-button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    height: 95%;
+}
+
+ion-col{
+    height: calc(55vh / 5);
+}
+
+.fontebonitinha{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffc409;
+}
+
+ion-content{
+    --background: #000000;
+}
+
+.abc{
+    color: #ffc409;
+}
+
+.round{
+    
+    --background: #ffc409;
+    color: black;
+}
+
+.rounda{
+    
+    --background: #d6a400;
+    color: black;
+}
+
+.roundbatata{
+    
+    --background: #d6a400;
+    color: black;
+}

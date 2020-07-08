@@ -1,17 +1,101 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>
-      Tab 2
+      Clássica
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card color="dark">
+    <ion-item color="dark">
+      <ion-label class="fontebonitinha">
+        {{calculo}}
+      </ion-label>
+    </ion-item>
+    <ion-item color="dark">
+      <p class="abc">=</p>
+      <ion-label class="fontebonitinha">
+        {{resultado}}
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card color="dark">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="limpar()" expand="block" class="rounda">C</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="rounda" (click)="apagarUltimo()" expand="block">DEL</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="rounda" (click)="adicionarPonto()" expand="block">.</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarOperacao('/')" expand="block" class="rounda">/</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('7')" expand="block" class="round">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('8')" expand="block" class="round">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('9')" expand="block" class="round">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarOperacao('*')" expand="block" class="rounda">*</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('4')" expand="block" class="round">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('5')" expand="block" class="round">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('6')" expand="block" class="round">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarOperacao('-')" expand="block" class="rounda">-</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('1')" expand="block" class="round">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('2')" expand="block" class="round">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('3')" expand="block" class="round">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarOperacao('+')" expand="block" class="rounda">+</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="rounda" expand="block" (click)="presentAlert('DESENVOLVEDOR: ','Lucas Santiago Fontes de Morais')">?</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="adicionarNumero('0')" expand="block" class="round">0</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button (click)="calcularResultado()" expand="block" class="roundbatata">=</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
+
+
+
 </ion-content>

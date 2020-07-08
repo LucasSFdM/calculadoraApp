@@ -7,6 +7,35 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  public n1: number;
 
+  public n2: number;
+
+  public resultado: number;
+
+  constructor() {
+  
+  }
+
+  public resultadosoma(){
+    this.resultado = this.n1 + this.n2;
+  }
+
+  public resultadosub(){
+    this.resultado = this.n1 - this.n2;
+  }
+
+  public resultadodiv(){
+    this.resultado = this.n1 / this.n2;
+  }
+
+  public resultadomult(){
+    this.resultado = this.n1 * this.n2;
+  }
+
+  public limpar(){
+    this.n1 = null;
+    this.n2 = null;
+    this.resultado = null;
+  }
 }
